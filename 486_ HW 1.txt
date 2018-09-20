@@ -1,0 +1,32 @@
+﻿Joey Martinez
+Homework 1
+
+
+Chapter 1
+
+
+1. Small apps that do not have security issues as well as locating files within a smaller system both would not benefit from an entire database structure.  
+2. The major column would need to be updated to reflect the change in the name CS to CSSE. Along with that, the course_number column would have to change as well as it has the type of major that it is related as part of its ID.
+3. In order to solve the problem of having to change the course_number, you could create a unique ID for the course number, and this would allow it so that we would only need to change the major column, instead of both course ID and major.
+
+
+Chapter 2
+
+
+1. The database state is the current moment that the database exists in. It is also called a snapshot of the database. On the other hand, the database schema is the description of the database, and in general, displays the structure of the database, but does not concern itself with specific instances.
+2.    1. Menu based interfaces: Provide user with helpful menus that guide users through requests. They do away with learning a complex querying languages. Those that need to get a simple database up and running quickly in a familiar format will use menu based interfaces. 
+   2. Forms-based interfaces: Allow users to fill out a form, and by doing so, they are able to describe what new data needs to be inserted. Typically designed for naive users to as interfaces for canned transactions.
+   3. Graphical User interfaces: Uses a diagrammatic form to display the schema to the user. This typically uses both menus and forms. This another instance for more casual users, who do not want to spend a lot of time learning a difficult querying language.
+   4. Natural Language interfaces: Interface that tries to interpret text written in English or other languages and interpret the intent of the user through this text. While still rough around the edges, this interface attempts help out a similar user to the previously mentioned interfaces, and offer an alternative or added feature to the interfaces they are used to. 
+   5. Speech Input/Output: Type of interface that allows users to give a limited amount of speech to give input to the interface, and the interface can also offer a limited amount of speech as output as well. This would benefit the previously mentioned users, as well as those who are visually impaired, or those who have a difficulty using the keyboard.
+   6. Interfaces for Parametric Users: Interface designed to allow the user to perform simple tasks repeatedly with minimal effort. Usually for parametric users, such as bank tellers, as they have to perform many repeated tasks that do not change often.
+   7. Interfaces for DBA: Interface designed to allow the user to create accounts, set system parameters, grant account authorization, change a schema, and reorganize the storage structures of a database. Meant to be used by DBA’s.
+1. I would use the three tiered architecture for web applications, as I would imagine that this service would exist on the internet, and making it a web app for such purposes makes the most sense. Likewise, it would probably be easier for users to interact with a graphical interface, used in three tiered architecture, as it would make using the architecture far easier, and allow users to not have to learn any difficult concepts to use the web app. The centralized DBMS architecture would not work in this scenario, as it require the user to understand how to work with a terminal, or software similar to terminals, which would deter users from using the service, and having one computer handle all of the processing would be wasting the power that the user’s machine could provide. The Basic Client/Server Architectures and Two-Tier Client/Server Architectures both are better suited for this situation, but suffer from the lack of a middle tier to better handle queries from users, and responses from the database. In this case it would be much harder to create a graphical interface for the user, with this intermediate layer missing, as data could not be processed in the same fashion. 
+
+
+Chapter 3
+1. Mathematically speaking, a relation is a set of tuples, and a set does not have an order, so a relation would also not have an order.
+2. A candidate key is designated to be a primary key because it makes dealing with relations in a database easier when there is a distinct key for each relation so as to make identification easier, instead of multiple keys, which may make identification more difficult.
+3. A foreign key is a key used as an attribute in a table, and is used to make a relation between to tables.
+4. Course number would be the most obvious choice for a primary key as it provides a clear and unique designation for each class, without needing any extra information to do so. Since university section number is also unique, it could also work in the same way that course number would. Some other possible candidate keys could be Time_period, but only if no other classes are taught at the exact same time, as this would cause confusion as to which class the key refers to. Instructor name could also work, but would need unique teachers for each class as well.
+5. The advantages of using a generated key it easily fits the requirements necessary for a primary key, allowing unique ids to identify each record. Likewise, as the question already somewhat stated, since the key is generated, it keeps the privacy of the record intact so that no sensitive information is given out unnecessarily. The disadvantages of this however are that when used as foreign keys, they have no meaning to the record they are referring to, and thus are prone to errors. In some cases it is possible that two different databases would have the same generated key, since there is nothing stopping them from creating unique ids from all other databases, and this has potential to cause errors if the two databases were to share data.
