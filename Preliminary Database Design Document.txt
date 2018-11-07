@@ -1,0 +1,93 @@
+﻿Preliminary Database Design Document
+CMSI 486 Intro to Database Systems
+Joey Martinez, John Hardy
+________________
+1.1 – Project description
+1.1.1 Project Description
+John Hardy and Joey Martinez are working on a music database project in which we will store information about music, which includes songs, albums,groups, and genres. 
+1.1.2 Who it is for
+Those who are audiophiles, or anyone who just casually enjoys music will likely use this database.
+1.2 – Data description
+The type of data expected to be stored in the database are song files and the information regarding the songs, such as the title and length of the songs. We will also store information about albums and info about albums, such as cover art and how many songs, bands and information about bands, such as the artists within them, and genres. Subgenres will also be a part of the data within the database and will be included within the genres entity. 
+1.3 – Data Examples
+1. Album names
+2. Album cover art
+3. Publisher information
+4. Song files
+5. Song names
+6. Group names
+7. Number of members in a group
+8. Genre name
+9. Related subgenres
+1.4 – Database Schema
+* Database will be based on a structure of genres, albums, groups and songs
+* Each genre may contain 1 or more sub-genres
+   * Each sub-genre will have a name attribute
+   * All related sub-genres will keep track of their related genres
+* All sub-genres must fall under 1 or more main genres
+* One sub-genre can exist as one main genre by itself
+* All albums will be structured under one or more genres
+   * By “genre” I am referring to a main genre and not individual sub-genres
+   * Albums will have several attributes such as name, cover art, publisher, and publishing date
+* All albums must contain 1 or more songs
+   * Songs will have several attributes such as name, length, the song file, and a boolean flag determining if the song is explicit or not
+* Both albums and songs will be related to a groups entity
+   * A group represents one or more persons who created the album or songs
+   * Each group will have a name and # of members attributes
+   * A group will have a relationship with one or more genres as well
+
+
+Table Examples:
+Genre
+	Name
+	Related To
+	Groups
+	Electronic
+	Synthwave, Retrowave, Chillwave
+	HOME, ALLISON, MOON
+	
+
+Album
+	Name
+	Publisher
+	Publish Date
+	Cover Art
+	Songs
+	Group
+	Odyssey
+	Electronic Gems
+	Dec 2, 2017
+	CoverArt.png
+	Resonance, Odyssey, Way Shape and Form
+	HOME
+	
+
+Song
+	Name
+	Length
+	Explicit?
+	File
+	Group
+	Resonance
+	4:35
+	False
+	Resonance.mp3
+	HOME
+	
+
+Group
+	Name
+	Number of Members
+	Genres
+	Albums
+	Songs
+	HOME
+	1
+	Synthwave, Retrowave, Chillwave
+	Odyssey
+
+
+	Odyssey, Resonance, Hold
+	
+
+1.5 – Entity Relationship Diagram
